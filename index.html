@@ -21,6 +21,32 @@
     <meta name="twitter:creator" content="@DormRoomFund">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/zirafa/bootstrap-grid-only/94433673/css/grid12.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#founder-track-faq").hide();
+
+        $("#founder-track-button").click(function(e) {
+          e.preventDefault();
+
+          $("#founder-track-faq").show();
+          $("#investor-track-faq").hide();
+
+          $("#founder-track-button").addClass("underlined");
+          $("#investor-track-button").removeClass("underlined");
+        });
+
+        $("#investor-track-button").click(function(e) {
+          e.preventDefault();
+
+          $("#investor-track-faq").show();
+          $("#founder-track-faq").hide();
+
+          $("#investor-track-button").addClass("underlined");
+          $("#founder-track-button").removeClass("underlined");
+        });
+      });
+    </script>
 
     <title>The Blueprint Project</title>
 
@@ -32,7 +58,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
   </head>
 
-  <body>
+  <body class="remove-all-margin-padding">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3"></div>
@@ -97,6 +123,37 @@
 
           <p><strong>Featured Speakers</strong></p>
 
+          <div class="row">
+            <div class="col-md-3">
+              <img style="width: 100%" src="./img/speaker.png" />
+              <p style="text-align: center">
+                <strong style="color: #06029B"">Speaker Name</strong> <br />
+                Company Name
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img style="width: 100%" src="./img/speaker.png" />
+              <p style="text-align: center">
+                <strong style="color: #06029B"">Speaker Name</strong> <br />
+                Company Name
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img style="width: 100%" src="./img/speaker.png" />
+              <p style="text-align: center">
+                <strong style="color: #06029B"">Speaker Name</strong> <br />
+                Company Name
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img style="width: 100%" src="./img/speaker.png" />
+              <p style="text-align: center">
+                <strong style="color: #06029B"">Speaker Name</strong> <br />
+                Company Name
+              </p>
+            </div>
+          </div>
+
           <p>Still have some unanswered questions? <a href="#">Check out our FAQs.</a> </p>
         
           <a class="button-active" href="#">Apply to the Blueprint Investor Track</a>
@@ -126,12 +183,15 @@
         <div class="col-md-3"></div>
       </div>
     </div>
-    <div class="container-fluid">
+
+    <div class="container-fluid" style="background-color: #D8D8D8;">
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
+          <br />
           <h2>FAQ</h2>
-          <a href="#" style="margin-right: 2rem">Investor Track FAQ</a> <a href="#">Founder Track FAQ</a>
+          <a id="investor-track-button" class="underlined" style="margin-right: 2rem">Investor Track FAQ</a> 
+          <a id="founder-track-button">Founder Track FAQ</a>
           <div id="investor-track-faq">
             <p>
               <strong>1. When should I apply?</strong> <br />
@@ -208,6 +268,15 @@
           </div>
         </div>
         <div class="col-md-3"></div>
+      </div>
+    </div>
+    <div class="container-fluid" style="background-color: #000000; color: white;">
+      <div class="row">
+        <div class="col-md-12">
+          <br /> <br />
+          <p style="text-align: center;"><strong>Copyright 2020</strong></p>
+          <br /> <br />
+        </div>
       </div>
     </div>
   </body>

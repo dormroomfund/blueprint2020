@@ -45,12 +45,15 @@ p {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-weight: 300;
-  line-height: 1.5rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
 }
 
 li {
   font-weight: 300;
-  padding: 0.5rem
+  padding: 0.5rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
 }
 
 strong {
@@ -73,4 +76,19 @@ strong {
   display: block;
   padding: 1rem;
   text-decoration: none; 
+}
+
+a { 
+  color: inherit; 
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.remove-all-margin-padding {
+  margin:0 ! important;
+  padding:0 ! important;
 }
