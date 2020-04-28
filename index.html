@@ -27,23 +27,43 @@
         $("#founder-track-faq").hide();
 
         $("#founder-track-button").click(function(e) {
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#founder-track").offset().top
+          }, 500);
+        });
+
+        $("#investor-track-button").click(function(e) {
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#investor-track").offset().top
+          }, 500);
+        });
+
+        $("#founder-track-faq-button").click(function(e) {
           e.preventDefault();
 
           $("#founder-track-faq").show();
           $("#investor-track-faq").hide();
 
-          $("#founder-track-button").addClass("underlined");
-          $("#investor-track-button").removeClass("underlined");
+          $("#founder-track-faq-button").addClass("underlined");
+          $("#investor-track-faq-button").removeClass("underlined");
+
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#faq").offset().top
+          }, 500);
         });
 
-        $("#investor-track-button").click(function(e) {
+        $("#investor-track-faq-button").click(function(e) {
           e.preventDefault();
 
           $("#investor-track-faq").show();
           $("#founder-track-faq").hide();
 
-          $("#investor-track-button").addClass("underlined");
-          $("#founder-track-button").removeClass("underlined");
+          $("#investor-track-faq-button").addClass("underlined");
+          $("#founder-track-faq-button").removeClass("underlined");
+
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#faq").offset().top
+          }, 500);
         });
       });
     </script>
@@ -59,28 +79,32 @@
   </head>
 
   <body class="remove-all-margin-padding">
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-image: url('./img/track_1.png'); background-repeat: no-repeat; background-position: top right; background-size: 50%;">
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
           <div class="row">
             <div class="col-md-6">
               <br /> <br />
               <img src="./img/logo.png" style="width: 3.5rem;" />
               <h1>Blueprint Project</h1>
-              <p> <strong>A masterclass by Dorm Room Fund aimed at empowering diverse investors and founders.</strong></p>
+              <p>A masterclass by Dorm Room Fund aimed at empowering diverse investors and founders.</p>
+              <div style="margin-top: 1rem; margin-bottom: 2rem">
+                <img src="./img/drf_logo.png" class="small_logo" />
+                <img src="./img/frc_logo.png" class="small_logo" />
+              </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-6">
-              <img src="./img/investor.png" style="width: 100%" />
+              <img id="investor-track-button" src="./img/investor.png" style="width: 100%; cursor: grab;" />
             </div>
             <div class="col-md-6">
-              <img src="./img/founder.png" style="width: 100%" />
+              <img id="founder-track-button" src="./img/founder.png" style="width: 100%; cursor: grab;" />
             </div>
           </div>
-          <br />
+          <br id="investor-track" />
           <h2>Blueprint Investor Track</h2>
           <p>
             The Venture Capital industry has a reputation of being homogenous and tough to break into. Together we can change that. <br /> <br />
@@ -91,39 +115,41 @@
             
             Sounds like you? Apply below. <br /> <br />
 
-            Applications for The Blueprint Invest Track are now open and will close on May 15th at 11:59 PST. Click here to apply. <br /> <br />
+            Applications for The Blueprint Invest Track are now open and will close on <strong>May 24th at 11:59 PST</strong>. Click here to apply.
+          </p>
 
-            "We are the change that we seek"
-            
+          <h3><strong>"We are the change that we seek"</strong></h3>
+          <p>
             Leveraging the resources from our communities across the country, the Blueprint Investor Track is setting students up for success through:
 
             <ol>
-              <li>A curriculum crafted around the fundamentals and best practices of Venture Capital. Including sessions on sourcing the best companies, developing investors intuition, venture finance, and more.  </li>
-              <li>Access to leading investors of color who have walked in their shoes. Angel investors and fund managers who have build portfolios from the ground up.</li>
-              <li>Mentors that are dedicated to their success and who have a wealth of knowledge to share.</li>
-              <li>A community that is like-mind, diverse and highly motivated. A value-rich community of their peers, Dorm Room Fund, HBCUvc,  First Round Capital, and VC networks like BLCK VC and LTX VC. </li>
+              <li><span>A curriculum crafted around the fundamentals and best practices of Venture Capital. Including sessions on sourcing the best companies, developing investors intuition, venture finance, and more.  </span></li>
+              <li><span>Access to leading investors of color who have walked in their shoes. Angel investors and fund managers who have build portfolios from the ground up.</span></li>
+              <li><span>Mentors that are dedicated to their success and who have a wealth of knowledge to share.</span></li>
+              <li><span>A community that is like-mind, diverse and highly motivated. A value-rich community of their peers, Dorm Room Fund, HBCUvc,  First Round Capital, and VC networks like BLCK VC and LTX VC.</span> </li>
             </ol>
           </p>
 
-          <p><strong>Curriculum</strong></p>
+          <h3><strong>Curriculum</strong></h3>
           <p>
             New to Venture Capital? 
             We’ve got you covered. 
             Our six week program will give you the fundamental skills and frameworks you need to jumpstart your Venture Capital journey. 
             Here’s what it looks like:
+
+            <hr />
             <ul>
-              <li> Intro to Venture Capital: Who? What? When? Where? How? </li>
-              <li>Venture Finance 101: Cap Tables and Term Sheets</li>
-              <li>Technology Trends & Developing Theses</li>
-              <li>Business Models & Market Sizing</li>
-              <li>Deal Sourcing & Entrepreneur Support</li>
-              <li>VC Case Study: Asking the Right Questions</li>
+              <li><span>Intro to Venture Capital: Who? What? When? Where? How? </span></li>
+              <li><span>Venture Finance 101: Cap Tables and Term Sheets</span></li>
+              <li><span>Technology Trends & Developing Theses</span></li>
+              <li><span>Business Models & Market Sizing</span></li>
+              <li><span>Deal Sourcing & Entrepreneur Support</span></li>
+              <li><span>VC Case Study: Asking the Right Questions</span></li>
             </ul>
           </p>
 
-          <p><strong>Featured Speakers</strong></p>
-
-          <div class="row">
+          <h3><strong>Featured Speakers</strong></h3>
+          <div class="row" style="margin-top: 2rem">
             <div class="col-md-3">
               <img style="width: 100%" src="./img/speaker.png" />
               <p style="text-align: center">
@@ -158,7 +184,7 @@
         
           <a class="button-active" href="#">Apply to the Blueprint Investor Track</a>
 
-          <br />
+          <br id="founder-track" />
           <h2>Blueprint Founder Track</h2>
           <p>
             Born out of a desire to scale the impact of minority founders in the startup ecosystem, Dorm Room Fund’s Blueprint Project is a 9-week program in New York City supporting underrepresented founders of color.
@@ -166,32 +192,32 @@
             We’re looking for talented Black, Latinx, and Native American students and recent grads with an entrepreneurial mindset and a big idea. Sounds like you? Apply below.
           </p>
 
-          <p><strong>...Heart Of The City</strong></p>
+          <h3><strong>...Heart Of The City</strong></h3>
           <p>
             Leveraging Silicon Alley resources, the Blueprint Project gives underrepresented minority founders an edge through:
             <ul>
-              <li>Access to tech leaders that have walked in their shoes. Founders and venture capitalists of color offering candid advice in a safe environment.</li>
-              <li>A curriculum crafted around the needs of today’s diverse entrepreneur. Including sessions on scaling profitably, finding their first customer, navigating the venture capital space, and more.</li>
-              <li>Mentors that are dedicated to their success. Technical operators, masters of scale, and growth hackers are on standby to help shape their business.</li>
-              <li>A community that catapults their little black book. A value-rich community of their peers, Dorm Room Fund, and the prominent First Round Capital.</li>
+              <li><span>Access to tech leaders that have walked in their shoes. Founders and venture capitalists of color offering candid advice in a safe environment.</span></li>
+              <li><span>A curriculum crafted around the needs of today’s diverse entrepreneur. Including sessions on scaling profitably, finding their first customer, navigating the venture capital space, and more.</span></li>
+              <li><span>Mentors that are dedicated to their success. Technical operators, masters of scale, and growth hackers are on standby to help shape their business.</span></li>
+              <li><span>A community that catapults their little black book. A value-rich community of their peers, Dorm Room Fund, and the prominent First Round Capital.</span></li>
             </ul>
           </p>
           <a class="button-inactive" href="">Applications for the Founder Track are now closed.</a>
 
           <br /> <br />
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #D8D8D8;">
+    <div class="container-fluid" style="background-color: black; color: white">
       <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="faq">
           <br />
-          <h2>FAQ</h2>
-          <a id="investor-track-button" class="underlined" style="margin-right: 2rem">Investor Track FAQ</a> 
-          <a id="founder-track-button">Founder Track FAQ</a>
+          <h3 style="margin-bottom: 0.5rem">FAQ</h3>
+          <a id="investor-track-faq-button" class="underlined" style="margin-right: 2rem; cursor: grab;">Investor Track FAQ</a> 
+          <a id="founder-track-faq-button" style="cursor: grab;">Founder Track FAQ</a>
           <div id="investor-track-faq">
             <p>
               <strong>1. When should I apply?</strong> <br />
