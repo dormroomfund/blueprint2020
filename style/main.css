@@ -35,10 +35,21 @@ html {
 
 h1 {
   margin-bottom: 0rem;
+  font-size: 3.5rem;
+  color: #0702D1;
 }
 
 h2 {
+  padding-top: 1.5rem !important;
+  font-size: 2.5rem;
+  margin-bottom: 0;
   color: #0702D1;
+}
+
+h3 {
+  padding-top: 1.25rem !important;
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 p {
@@ -57,7 +68,7 @@ li {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .button-active {
@@ -65,16 +76,16 @@ strong {
   color: #FFFFFF;
   text-align: center;
   display: block;
-  padding: 1rem;
+  padding: 2rem;
   text-decoration: none;
 }
 
 .button-inactive {
   background-color: #E4E7FF;
-  color: #0702D1;
+  color: ;
   text-align: center;
   display: block;
-  padding: 1rem;
+  padding: 2rem;
   text-decoration: none; 
 }
 
@@ -91,4 +102,27 @@ a {
 .remove-all-margin-padding {
   margin:0 ! important;
   padding:0 ! important;
+}
+
+.small_logo{
+  height: 40px;
+  margin-right: 25px;
+}
+
+li {
+  color: #0702D1; /* bullet color */
+}
+
+span {
+  color: black
+}
+
+hr{ 
+  max-width: 25%; 
+  margin-left:0;
+}
+
+.track-container {
+  display: flex;
+  justify-content: flex-end;
 }
