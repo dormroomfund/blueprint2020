@@ -65,6 +65,7 @@ li {
   padding: 0.5rem;
   line-height: 2rem;
   font-size: 1.25rem;
+  color: #0702D1; /* bullet color */
 }
 
 strong {
@@ -109,10 +110,6 @@ a {
   margin-right: 25px;
 }
 
-li {
-  color: #0702D1; /* bullet color */
-}
-
 span {
   color: black
 }
@@ -125,4 +122,14 @@ hr{
 .track-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.speaker-column {
+  padding: 2rem
+}
+
+.speaker-column img {
+  width: 20rem;
+  margin: auto;    
+  display: block;
 }

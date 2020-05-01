@@ -26,6 +26,12 @@
       $(document).ready(function() {
         $("#founder-track-faq").hide();
 
+        $("#faq-link").click(function(e) {
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#faq").offset().top
+          }, 500);
+        });
+
         $("#founder-track-button").click(function(e) {
           $([document.documentElement, document.body]).animate({
               scrollTop: $("#founder-track").offset().top
@@ -115,7 +121,7 @@
             
             Sounds like you? Apply below. <br /> <br />
 
-            Applications for The Blueprint Invest Track are now open and will close on <strong>May 24th at 11:59 PST</strong>. Click here to apply.
+            Applications for The Blueprint Investor Track are now open and will close on <strong>May 24th at 11:59 PST</strong>. <a href="https://dormroomfund.typeform.com/to/diFqWf?email=xxxxx">Click here to apply.</a>
           </p>
 
           <h3><strong>"We are the change that we seek"</strong></h3>
@@ -124,7 +130,7 @@
 
             <ol>
               <li><span>A curriculum crafted around the fundamentals and best practices of Venture Capital. Including sessions on sourcing the best companies, developing investors intuition, venture finance, and more.  </span></li>
-              <li><span>Access to leading investors of color who have walked in their shoes. Angel investors and fund managers who have build portfolios from the ground up.</span></li>
+              <li><span>Access to leading investors who have walked in their shoes. Angel investors and fund managers who have built portfolios from the ground up.</span></li>
               <li><span>Mentors that are dedicated to their success and who have a wealth of knowledge to share.</span></li>
               <li><span>A community that is like-mind, diverse and highly motivated. A value-rich community of their peers, Dorm Room Fund, HBCUvc,  First Round Capital, and VC networks like BLCK VC and LTX VC.</span> </li>
             </ol>
@@ -150,39 +156,55 @@
 
           <h3><strong>Featured Speakers</strong></h3>
           <div class="row" style="margin-top: 2rem">
-            <div class="col-md-3">
-              <img style="width: 100%" src="./img/speaker.png" />
+            <div class="speaker-column col-md-6">
+              <img src="./img/speaker.png" />
               <p style="text-align: center">
-                <strong style="color: #06029B"">Speaker Name</strong> <br />
-                Company Name
+                <strong style="color: #06029B"">Mario Ruiz</strong> <br />
+                Investor at PayPal Ventures
+              </p>
+              <p>
+                Mario is an Investor at PayPal Ventures where he is focused on the future of Fintech. Prior to Paypal, Mario was Managing Partner at Dorm Room Fund in NYC where he co-founded The Blueprint Project. Before that he spent time as an investor at Napier Park Global Capital and in investment banking at Barclays.
               </p>
             </div>
-            <div class="col-md-3">
-              <img style="width: 100%" src="./img/speaker.png" />
+            <div class="speaker-column col-md-6">
+              <img src="./img/speaker.png" />
               <p style="text-align: center">
-                <strong style="color: #06029B"">Speaker Name</strong> <br />
-                Company Name
+                <strong style="color: #06029B"">Nashilu Mouen-Makoua</strong> <br />
+                Head of Operations at Clay.run
+              </p>
+              <p>
+                Nashilu is Head of Operations at Clay.run, bringing together the best parts of spreadsheets, coding and simple automation. Prior to Clay.run, Nashilu was an investor at First Round Capital and Dorm Room Fund.
               </p>
             </div>
-            <div class="col-md-3">
-              <img style="width: 100%" src="./img/speaker.png" />
+          </div>
+          <div class="row">
+            <div class="speaker-column col-md-6">
+              <img src="./img/speaker.png" />
               <p style="text-align: center">
-                <strong style="color: #06029B"">Speaker Name</strong> <br />
-                Company Name
+                <strong style="color: #06029B"">Frederik Groce</strong> <br />
+                Principal at Storm Ventures
+              </p>
+              <p>
+                Frederik is a Principal at Storm Ventures were he focused on B2B, AI, SaaS, Vertical SaaS, GovTech, and Enterprise Voice Tech. Prior to Storm Ventures, Frederik spent two years as CEO of Stanford Student Enterprises. He is also the co-founder of BLCK VC. 
               </p>
             </div>
-            <div class="col-md-3">
-              <img style="width: 100%" src="./img/speaker.png" />
+            <div class="speaker-column col-md-6">
+              <img src="./img/speaker.png" />
               <p style="text-align: center">
-                <strong style="color: #06029B"">Speaker Name</strong> <br />
-                Company Name
+                <strong style="color: #06029B"">Abdul Ly</strong> <br />
+                Investor at Index Ventures
+              </p>
+              <p>
+                Abdul is an investor at Index Ventures where he focuses on enterprise and consumer software. Prior to Index, Abdul spent time as an investor at First Round Capital and helping founders scale consumer internet startups at Google.  
               </p>
             </div>
           </div>
 
-          <p>Still have some unanswered questions? <a href="#">Check out our FAQs.</a> </p>
+          <br />
         
-          <a class="button-active" href="#">Apply to the Blueprint Investor Track</a>
+          <a class="button-active" href="https://dormroomfund.typeform.com/to/diFqWf?email=xxxxx">Apply to the Blueprint Investor Track</a>
+          <p style="margin-top: 2em">Still have some unanswered questions? <a id="faq-link" href="#">Check out our FAQs.</a> </p>
+
 
           <br id="founder-track" />
           <h2>Blueprint Founder Track</h2>
@@ -212,8 +234,8 @@
 
     <div class="container-fluid" style="background-color: black; color: white">
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6" id="faq">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="faq">
           <br />
           <h3 style="margin-bottom: 0.5rem">FAQ</h3>
           <a id="investor-track-faq-button" class="underlined" style="margin-right: 2rem; cursor: grab;">Investor Track</a> 
@@ -225,15 +247,15 @@
               
               <br /><br />
               <strong>2. Who are you looking for?</strong><br />
-              You’re an underrepresented minority student who identifies as Black, Latinx or Indigenous. 
-
-              We welcome students of all backgrounds to apply. You could be a freshman majoring in Poli-sci or a PhD student studying Machine Learning. As long as you’re a full-time student graduating 2022 or later, you’re invited to apply to join the Dorm Room Fund team. If this is the summer before you start a full-time program we encourage you to apply (ex: B-School, Law School, Incoming freshman).
-
-              You have passion for entrepreneurship and curiosity about new innovations, businesses, or technology. Don’t worry if you don’t have a ton of experience yet. We value life-long learners and folks driven  by curiosity.
-
-              You have hustle and like to tackle challenges head on. Operating in the world of VC takes a lot of work, so this is something you should be prepared to do. 
-
-              <br /><br />
+            <p/>
+              <ul>
+                <li style="color: white !important">You’re an underrepresented minority student who identifies as Black, Latinx or Indigenous. </li>
+                <li style="color: white !important">We welcome students of all backgrounds to apply. You could be a freshman majoring in Poli-sci or a PhD student studying Machine Learning. As long as you’re a full-time student graduating 2022 or later, you’re invited to apply to join the Dorm Room Fund team. If this is the summer before you start a full-time program we encourage you to apply (ex: B-School, Law School, Incoming freshman).</li>
+                <li style="color: white !important">You have passion for entrepreneurship and curiosity about new innovations, businesses, or technology. Don’t worry if you don’t have a ton of experience yet. We value life-long learners and folks driven  by curiosity.</li>
+                <li style="color: white !important">You have hustle and like to tackle challenges head on. Operating in the world of VC takes a lot of work, so this is something you should be prepared to do. </li>
+              </ul>
+            <p>
+              <br />
               <strong>3. What is the selection process?</strong> <br />
               After reviewing your application, a member of our team may reach out to you for a 30 minute video interview. This interview is to get to know you better and learn more about what excites you. We will notify all applicants of their status by May 31st. 
 
@@ -293,7 +315,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
     <div class="container-fluid" style="background-color: #000000; color: white;">
