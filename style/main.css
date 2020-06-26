@@ -129,7 +129,7 @@ hr{
 }
 
 .speaker-column img {
-  height: 20rem;
+  width: 100%;
   margin: auto;    
   display: block;
 }
